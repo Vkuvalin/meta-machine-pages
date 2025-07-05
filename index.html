@@ -30,201 +30,187 @@
 
 <!-- ########################################################################################################################################################################################################################################################## -->
 
-  <!-- ################################# TOPBAR ################################ -->
-  <div class="topbar">
-    <div class="container-inline">
-      <img src="./favicon.png" loading="lazy" alt="Meta Machine" class="gpt-logo" style="width: 35px; height: 35px; margin-right: 10px;"/>
-      <h1>Meta Machine</h1>
-    </div>
-    <button class="burger" aria-label="Меню">☰</button>
-    <div class="tabs">
-      <div class="tab active" data-tab="home">Главная</div>
-      <div class="tab" data-tab="guide">Инструкции</div>
-      <div class="tab" data-tab="github">GitHub</div>
-    </div>
+<!-- ################################# TOPBAR ################################ -->
+<div class="topbar">
+	<div class="container-inline">
+		<img src="./favicon.png" loading="lazy" alt="Meta Machine" class="gpt-logo" style="width: 35px; height: 35px; margin-right: 10px;"/>
+		<h1>Meta Machine</h1>
+	</div>
+	<button class="burger" aria-label="Меню">☰</button>
+	<div class="tabs">
+		<div class="tab active" data-tab="home">Главная</div>
+		<div class="tab" data-tab="guide">Инструкции</div>
+		<div class="tab" data-tab="architecture">Архитектура</div>
+		<div class="tab" data-tab="github">GitHub</div>
+	</div>
+</div>
 
-  </div>
-  <nav class="mobile-menu" id="mobileMenu">
-    <a class="mobile-link" data-tab="home">Главная</a>
-    <a class="mobile-link" data-tab="guide">Инструкции</a>
-    <a class="mobile-link" data-tab="github">GitHub</a>
-  </nav>
-  <!-- ########################################################################## -->
+<nav class="mobile-menu" id="mobileMenu">
+	<a class="mobile-link" data-tab="home">Главная</a>
+	<a class="mobile-link" data-tab="guide">Инструкции</a>
+	<а class="mobile-link" data-tab="architecture">Архитектура</div>
+	<a class="mobile-link" data-tab="github">GitHub</a>
+</nav>
+<!-- ########################################################################## -->
 
 
 
 
 <!-- ################################# ГЛАВНАЯ ################################ -->
-  <div class="content">
-    <div id="home" class="section active">
+<div class="content">
+	<div id="home" class="section active">
         <h1>META MACHINE</h1>
-	    <div id="rotating-description">
-			<p class="phrase-1 welcome-description-1"></p>
-			<p class="phrase-2 welcome-description-2"></p>
-			<p class="phrase-3 welcome-description-2"></p>
-			<p class="phrase-4 welcome-description-2"></p>
-	    </div>
+	<div id="rotating-description">
+		<p class="phrase-1 welcome-description-1"></p>
+		<p class="phrase-2 welcome-description-2"></p>
+		<p class="phrase-3 welcome-description-2"></p>
+		<p class="phrase-4 welcome-description-2"></p>
+	</div>
 	  
-	  <!-- 🔽 Динамически изменяющийся список слоганов и описаний  -->
-		<div id="phrase-list" style="display: none;">
-			<div class="desktop-only" data-p1="Усиливает ваше мышление, а не заменяет его." 
-					data-p2="Помогает понять суть, выстроить логику, проверить вывод — идя к собственному осознанному решению."
-					data-p3="Это не инструмент для копирования ответов — это партнёр в процессе мышления, анализа, понимания."
-					data-p4="Обычные ИИ заменяют усилие. Meta Machine возвращает удовольствие от мышления."></div>
+	<!-- Динамически изменяющийся список слоганов и описаний -->
+	<div id="phrase-list" style="display: none;">
+		<div 	data-p1="Усиливает ваше мышление, а не заменяет его." 
+			data-p2="Помогает понять суть, выстроить логику, проверить вывод — идя к собственному осознанному решению."
+			data-p3="Это не инструмент для копирования ответов — это партнёр в процессе мышления, анализа, понимания."
+			data-p4="Обычные ИИ заменяют усилие. Meta Machine возвращает удовольствие от мышления."></div>
 
-			<div class="desktop-only" data-p1="Мышление как архитектура. Интеллект как процесс." 
-					data-p2="Не решает за вас — разворачивает ход рассуждения, помогает понять суть."
-					data-p3="Это партнёр, а не генератор. Ты не потребляешь — ты постигаешь."
-					data-p4="Подходит всем, кто мыслит — и хочет мыслить лучше."></div>
+		<div 	data-p1="Мышление как архитектура. Интеллект как процесс." 
+			data-p2="Не решает за вас — разворачивает ход рассуждения, помогает понять суть."
+			data-p3="Это партнёр, а не генератор. Ты не потребляешь — ты постигаешь."
+			data-p4="Подходит всем, кто мыслит — и хочет мыслить лучше."></div>
 
-			<div class="desktop-only" data-p1="Интеллект, который усиливает вас, а не заменяет." 
-					data-p2="Мышление как архитектура. Интеллект как процесс."
-					data-p3="Превращает неясность в структуру, вопрос — в гипотезу, а идею — в решение. "
-					data-p4="Это партнёр в процессе анализа, осмысления и понимания."></div>
+		<div 	data-p1="Интеллект, который усиливает вас, а не заменяет." 
+			data-p2="Мышление как архитектура. Интеллект как процесс."
+			data-p3="Превращает неясность в структуру, вопрос — в гипотезу, а идею — в решение. "
+			data-p4="Это партнёр в процессе анализа, осмысления и понимания."></div>
 
-			<div class="desktop-only" data-p1="Возвращает удовольствие от процесса мышления." 
-					data-p2="Это партнёр, с которым мысль приобретает структуру, а интуиция — аргумент."
-					data-p3="Ты не потребляешь ответ — ты приходишь к нему."
-					data-p4="Meta Machine раскрывает скрытое, соединяя логическое, чувственное и сознательное."></div>
+		<div 	data-p1="Возвращает удовольствие от процесса мышления." 
+			data-p2="Это партнёр, с которым мысль приобретает структуру, а интуиция — аргумент."
+			data-p3="Ты не потребляешь ответ — ты приходишь к нему."
+			data-p4="Meta Machine раскрывает скрытое, соединяя логическое, чувственное и сознательное."></div>
 					
-			<div class="desktop-only" data-p1="Партнёр, поддерживающий мышление, а не подменяющий его." 
-					data-p2="Помогает разобрать вопрос, увидеть суть, выстроить рассуждение шаг за шагом."
-					data-p3="Показывает и рассказывает, как рассуждаее интеллект — а не просто отвечает."
-					data-p4="Когда вокруг — готовые ответы, она предлагает подумать. Потому что мышление — это сила."></div>
+		<div	data-p1="Партнёр, поддерживающий мышление, а не подменяющий его." 
+			data-p2="Помогает разобрать вопрос, увидеть суть, выстроить рассуждение шаг за шагом."
+			data-p3="Показывает и рассказывает, как рассуждаее интеллект — а не просто отвечает."
+			data-p4="Когда вокруг — готовые ответы, она предлагает подумать. Потому что мышление — это сила."></div>
 					
-			<div data-p1="Не быстро, а правильно." 
-					data-p2="Из хаоса текста она строит упорядоченное мышлениее."
-					data-p3="Она не заменяет, а усиливает. Не реагирует — организует."
-					data-p4="Не чёрный ящик, а мыслящая система, работающая как член команды."></div>
+		<div 	data-p1="Не быстро, а правильно." 
+			data-p2="Из хаоса текста она строит упорядоченное мышлениее."
+			data-p3="Она не заменяет, а усиливает. Не реагирует — организует."
+			data-p4="Не чёрный ящик, а мыслящая система, работающая как член команды."></div>
 					
-			<div data-p1="Не упрощаем мышление — вдохновляем его." 
-					data-p2="Технология, которая мыслит. Интерфейс — понимает."
-					data-p3="Не говорит за вас — она помогает построить смысл."
-					data-p4="Это вызов вашему разуму: не отключайся — подключайся глубже."></div>
+		<div 	data-p1="Не упрощаем мышление — вдохновляем его." 
+			data-p2="Технология, которая мыслит. Интерфейс — понимает."
+			data-p3="Не говорит за вас — она помогает построить смысл."
+			data-p4="Это вызов вашему разуму: не отключайся — подключайся глубже."></div>
 					
-			<div data-p1="Ты не потребляешь — ты постигаешь." 
-					data-p2="ИИ заменяют усилие. Meta Machine возвращает удовольствие от мышления."
-					data-p3="Она не фильтрует хаос — она показывает, как его распутать."
-					data-p4="Мышление — не функция. Это маршрут. И он начинается здесь."></div>
+		<div 	data-p1="Ты не потребляешь — ты постигаешь." 
+			data-p2="ИИ заменяют усилие. Meta Machine возвращает удовольствие от мышления."
+			data-p3="Она не фильтрует хаос — она показывает, как его распутать."
+			data-p4="Мышление — не функция. Это маршрут. И он начинается здесь."></div>
 					
-			<div data-p1="Способ думать по-другому." 
-					data-p2="Не генерирует текст — она разворачивает смысл."
-					data-p3="Строит ход мысли, ведёт через сложное — к ясному."
-					data-p4="Это партнёр, которому важно не говорить, а понимать."></div>
+		<div 	data-p1="Способ думать по-другому." 
+			data-p2="Не генерирует текст — она разворачивает смысл."
+			data-p3="Строит ход мысли, ведёт через сложное — к ясному."
+			data-p4="Это партнёр, которому важно не говорить, а понимать."></div>
 					
-			<div data-p1="Мыслите, а не копируете." 
-					data-p2="ИИ решает за вас. Meta Machine — думает с вами."
-					data-p3="Она не заменяет разум — она восстанавливает его силу."
-					data-p4="Помогает анализировать, задавать, уточнять и находить."></div>
-				
-		</div>
+		<div 	data-p1="Мыслите, а не копируете." 
+			data-p2="ИИ решает за вас. Meta Machine — думает с вами."
+			data-p3="Она не заменяет разум — она восстанавливает его силу."
+			data-p4="Помогает анализировать, задавать, уточнять и находить."></div>		
+	</div>
       
-	  
-	  
-<!-- ################################ КАРТОЧКИ  -->
-      <div class="gpt-grid">
-        <div class="gpt-card-low-color gpt-card--meta" 		data-tab="gpt-1" data-link="https://chatgpt.com/g/g-67eb695825488191bb40e714709d57c5-meta-machine"><img src="assets/gpt_icons/meta_ico.png" loading="lazy" alt="Meta Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--meta">Meta Machine</h3>		<p><em><strong>Универсальная конфигурация		</strong></em><br>Подходит под любые задачи: от простого вопроса до глубокой аналитики. Адаптируется к пользователю, контексту и стилю мышления.</p></div></div>
-        <div class="gpt-card gpt-card--research" 		data-tab="gpt-8" data-link="https://chatgpt.com/g/g-685dee63ff048191b06b777d74148d24-research-machine"><img src="assets/gpt_icons/research_ico.png" loading="lazy" alt="Research Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--research">Research Machine</h3>	<p><em><strong>Мыслящий исследователь			</strong></em><br>Помогает формулировать гипотезы, разбираться в сложных темах и увидеть незаметное. Читает между строк и структурирует знания.</p></div></div>
-	<div class="gpt-card gpt-card--sense" 			data-tab="gpt-9" data-link="https://chatgpt.com/g/g-685dee8910448191be22867c3d6b4e50-sense-machine"><img src="assets/gpt_icons/sense_ico.png" loading="lazy" alt="Sense Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--sense">Sense Machine</h3>		<p><em><strong>Модуль глубокого осмысления		</strong></em><br>Анализирует смыслы, парадоксы и философские конструкции. Умеет интерпретировать, переосмысливать и видеть скрытые слои.</p></div></div>
-        <div class="gpt-card gpt-card--creative" 		data-tab="gpt-3" data-link="https://chatgpt.com/g/g-685ded4ea1548191bf3c7bedb502fc99-creative-machine"><img src="assets/gpt_icons/creative_ico.png" loading="lazy" alt="Creative Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--creative">Creative Machine</h3>	<p><em><strong>Генератор нестандартных идей		</strong></em><br>Создаёт сюжеты, концепты и визуальные образы, соединяя ассоциации, символы и логику. Работает как концепт-инженер и художественный советник.</p></div></div>
-        <div class="gpt-card-low-color2 gpt-card--code" 	data-tab="gpt-7" data-link="https://chatgpt.com/g/g-685ded2466a0819189d79d580613ed22-code-machine"><img src="assets/gpt_icons/code_ico.png" loading="lazy" alt="Code Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--code">Code Machine</h3>		<p><em><strong>Мышление как у инженера			</strong></em><br>Строит архитектуру решений, пишет понятный код, помогает оптимизировать и объяснить технически сложное. Логика, структура и точность.</p></div></div>
-        <div class="gpt-card gpt-card--analyst" 		data-tab="gpt-2" data-link="https://chatgpt.com/g/g-685ded802dec8191bb267d6d20a74e77-analyst-machine"><img src="assets/gpt_icons/analyst_ico.png" loading="lazy" alt="Analyst Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--analyst">Analyst Machine</h3>	<p><em><strong>Аналитический модуль			</strong></em><br>Строит логические модели, выявляет слабые места, проверяет гипотезы, предлагает и предсказывает сценарии. Уровнь критики, причинности и прогноза.</p></div></div>
-        <div class="gpt-card gpt-card--design" 			data-tab="gpt-4" data-link="https://chatgpt.com/g/g-685decdb8ac48191aa661c8dbbfcb83e-design-machine"><img src="assets/gpt_icons/design_ico.png" loading="lazy" alt="Design Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--design">Design Machine</h3>	<p><em><strong>Интерфейс как мышление			</strong></em><br>Проектирует UX, визуальные структуры и информационную логику — с чувством баланса и ясности. Работает с функциональностью и формой одновременно.</p></div></div>
-        <div class="gpt-card gpt-card--education" 		data-tab="gpt-5" data-link="https://chatgpt.com/g/g-685dee2620508191b03ee665dac5891d-education-machine"><img src="assets/gpt_icons/education_ico.png" loading="lazy" alt="Education Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--education">Education Machine</h3>	<p><em><strong>Объясняет предельно ясно			</strong></em><br>Создаёт учебные траектории, структурирует знания — от простого к сложному, от незнания к пониманию. Подходит для обучения, наставничества и развития мышления.</p></div></div>
-        <div class="gpt-card gpt-card--strategy" 		data-tab="gpt-6" data-link="https://chatgpt.com/g/g-685deeacdc6c81918762f46c116e629c-strategy-machine"><img src="assets/gpt_icons/strategy_ico.png" loading="lazy" alt="Strategy Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--strategy">Strategy Machine</h3>	<p><em><strong>Стратегический модуль			</strong></em><br>Помогает сформулировать цель, выбрать путь, оценить риски и построить стратегию. Разрабатывает планы развития и анализирует перспективы.</p></div></div>
-	<div class="gpt-card-low-color gpt-card--trader"	data-tab="gpt-10" data-link="https://chatgpt.com/g/g-685deeca82dc8191b5a8f408e724e477-trader-machine"><img src="assets/gpt_icons/traider_ico.png" loading="lazy" alt="Trader Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--traider">Trader Machine</h3>	<p><em><strong>Модуль рыночного мышления		</strong></em><br>Анализирует динамику, строит сценарии и оценивает риски. Соединяет технический, поведенческий и вероятностный подходы для принятия решений.</p></div></div>
-      </div>
-    </div>
-<!-- ########################################################################## -->
-
+  <!-- ################################ КАРТОЧКИ  -->
+	<div class="gpt-grid">
+		<div class="gpt-card-low-color gpt-card--meta" 		data-tab="gpt-1" data-link="https://chatgpt.com/g/g-67eb695825488191bb40e714709d57c5-meta-machine"><img src="assets/gpt_icons/meta_ico.png" loading="lazy" alt="Meta Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--meta">Meta Machine</h3>		<p><em><strong>Универсальная конфигурация	</strong></em><br>Подходит под любые задачи: от простого вопроса до глубокой аналитики. Адаптируется к пользователю, контексту и стилю мышления.</p></div></div>
+		<div class="gpt-card gpt-card--research" 		data-tab="gpt-8" data-link="https://chatgpt.com/g/g-685dee63ff048191b06b777d74148d24-research-machine"><img src="assets/gpt_icons/research_ico.png" loading="lazy" alt="Research Machine" class="gpt-logo" /><div>	<h3 class="gpt-card--research">Research Machine</h3>	<p><em><strong>Мыслящий исследователь		</strong></em><br>Помогает формулировать гипотезы, разбираться в сложных темах и увидеть незаметное. Читает между строк и структурирует знания.</p></div></div>
+		<div class="gpt-card gpt-card--sense" 			data-tab="gpt-9" data-link="https://chatgpt.com/g/g-685dee8910448191be22867c3d6b4e50-sense-machine"><img src="assets/gpt_icons/sense_ico.png" loading="lazy" alt="Sense Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--sense">Sense Machine</h3>		<p><em><strong>Модуль глубокого осмысления	</strong></em><br>Анализирует смыслы, парадоксы и философские конструкции. Умеет интерпретировать, переосмысливать и видеть скрытые слои.</p></div></div>
+		<div class="gpt-card gpt-card--creative" 		data-tab="gpt-3" data-link="https://chatgpt.com/g/g-685ded4ea1548191bf3c7bedb502fc99-creative-machine"><img src="assets/gpt_icons/creative_ico.png" loading="lazy" alt="Creative Machine" class="gpt-logo" /><div>	<h3 class="gpt-card--creative">Creative Machine</h3>	<p><em><strong>Генератор нестандартных идей	</strong></em><br>Создаёт сюжеты, концепты и визуальные образы, соединяя ассоциации, символы и логику. Работает как концепт-инженер и художественный советник.</p></div></div>
+		<div class="gpt-card-low-color2 gpt-card--code" 	data-tab="gpt-7" data-link="https://chatgpt.com/g/g-685ded2466a0819189d79d580613ed22-code-machine"><img src="assets/gpt_icons/code_ico.png" loading="lazy" alt="Code Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--code">Code Machine</h3>		<p><em><strong>Мышление как у инженера		</strong></em><br>Строит архитектуру решений, пишет понятный код, помогает оптимизировать и объяснить технически сложное. Логика, структура и точность.</p></div></div>
+		<div class="gpt-card gpt-card--analyst" 		data-tab="gpt-2" data-link="https://chatgpt.com/g/g-685ded802dec8191bb267d6d20a74e77-analyst-machine"><img src="assets/gpt_icons/analyst_ico.png" loading="lazy" alt="Analyst Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--analyst">Analyst Machine</h3>	<p><em><strong>Аналитический модуль		</strong></em><br>Строит логические модели, выявляет слабые места, проверяет гипотезы, предлагает и предсказывает сценарии. Уровнь критики, причинности и прогноза.</p></div></div>
+		<div class="gpt-card gpt-card--design" 			data-tab="gpt-4" data-link="https://chatgpt.com/g/g-685decdb8ac48191aa661c8dbbfcb83e-design-machine"><img src="assets/gpt_icons/design_ico.png" loading="lazy" alt="Design Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--design">Design Machine</h3>	<p><em><strong>Интерфейс как мышление		</strong></em><br>Проектирует UX, визуальные структуры и информационную логику — с чувством баланса и ясности. Работает с функциональностью и формой одновременно.</p></div></div>
+		<div class="gpt-card gpt-card--education" 		data-tab="gpt-5" data-link="https://chatgpt.com/g/g-685dee2620508191b03ee665dac5891d-education-machine"><img src="assets/gpt_icons/education_ico.png" loading="lazy" alt="Education Machine" class="gpt-logo" /><div>	<h3 class="gpt-card--education">Education Machine</h3>	<p><em><strong>Объясняет предельно ясно		</strong></em><br>Создаёт учебные траектории, структурирует знания — от простого к сложному, от незнания к пониманию. Подходит для обучения, наставничества и развития мышления.</p></div></div>
+		<div class="gpt-card gpt-card--strategy" 		data-tab="gpt-6" data-link="https://chatgpt.com/g/g-685deeacdc6c81918762f46c116e629c-strategy-machine"><img src="assets/gpt_icons/strategy_ico.png" loading="lazy" alt="Strategy Machine" class="gpt-logo" /><div>	<h3 class="gpt-card--strategy">Strategy Machine</h3>	<p><em><strong>Стратегический модуль		</strong></em><br>Помогает сформулировать цель, выбрать путь, оценить риски и построить стратегию. Разрабатывает планы развития и анализирует перспективы.</p></div></div>
+		<div class="gpt-card-low-color gpt-card--trader"	data-tab="gpt-10" data-link="https://chatgpt.com/g/g-685deeca82dc8191b5a8f408e724e477-trader-machine"><img src="assets/gpt_icons/traider_ico.png" loading="lazy" alt="Trader Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--traider">Trader Machine</h3>	<p><em><strong>Модуль рыночного мышления	</strong></em><br>Анализирует динамику, строит сценарии и оценивает риски. Соединяет технический, поведенческий и вероятностный подходы для принятия решений.</p></div></div>
+	</div>
+</div>
+  <!-- ########################################################################## -->
 
 
 
 
 <!-- ############################## ИНСТРУКЦИИ ############################## -->
-    <div id="guide" class="section">
-      <h2>Инструкции</h2>
-      <p>Здесь вы сможете найти системную архитектуру, подробный гайд по использованию GPT и методику интеграции в проект.</p>
-	    
-      <!-- Обычная превью-картинка -->
-      <div class="architecture-img" >
-		<img  class="architecture-img" src="assets/architecture.png" loading="lazy" alt="System architecture" onclick="openDialog()" />
-      </div>
-
-<!-- Диалоговое окно с увеличенным изображением -->
-      <dialog id="archDialog" class="img-dialog" onclick="this.close()">
-		<img  class="architecture-img" src="assets/architecture.png" loading="lazy" alt="Full architecture" />
-      </dialog>
+<div id="guide" class="section">
+	<h2>Инструкции</h2>
+	<p>Здесь вы найдёте подробное описание каждой модели, её ролевые особенности и инструкции по применению.</p>
     
-	 <div class="gpt-grid">
-		<div class="gpt-card-low-color gpt-card--meta"		data-tab="gpt1"><img src="assets/gpt_icons/meta_ico.png" loading="lazy" alt="Meta Machine" class="gpt-logo" /><div>				<h3 class="gpt-card--meta">Meta Machine</h3>		<p>Подробная информация.</p></div></div>
-		<div class="gpt-card gpt-card--research" 		data-tab="gpt8"><img src="assets/gpt_icons/research_ico.png" loading="lazy" alt="Research Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--research">Research Machine</h3>	<p>Подробная информация.</p></div></div>
-		<div class="gpt-card gpt-card--sense" 			data-tab="gpt9"><img src="assets/gpt_icons/sense_ico.png" loading="lazy" alt="Sense Machine" class="gpt-logo" /><div>				<h3 class="gpt-card--sense">Sense Machine</h3>		<p>Подробная информация.</p></div></div>
-		<div class="gpt-card gpt-card--creative" 		data-tab="gpt3"><img src="assets/gpt_icons/creative_ico.png" loading="lazy" alt="Creative Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--creative">Creative Machine</h3>	<p>Подробная информация.</p></div></div>
-		<div class="gpt-card-low-color2 gpt-card--code"		data-tab="gpt7"><img src="assets/gpt_icons/code_ico.png" loading="lazy" alt="Code Machine" class="gpt-logo" /><div>				<h3 class="gpt-card--code">Code Machine</h3>		<p>Подробная информация.</p></div></div>
-		<div class="gpt-card gpt-card--analyst" 		data-tab="gpt2"><img src="assets/gpt_icons/analyst_ico.png" loading="lazy" alt="Analyst Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--analyst">Analyst Machine</h3>	<p>Подробная информация.</p></div></div>
-		<div class="gpt-card gpt-card--design" 			data-tab="gpt4"><img src="assets/gpt_icons/design_ico.png" loading="lazy" alt="Design Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--design">Design Machine</h3>	<p>Подробная информация.</p></div></div>
-		<div class="gpt-card gpt-card--education"	 	data-tab="gpt5"><img src="assets/gpt_icons/education_ico.png" loading="lazy" alt="Education Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--education">Education Machine</h3>	<p>Подробная информация.</p></div></div>
-		<div class="gpt-card gpt-card--strategy" 		data-tab="gpt6"><img src="assets/gpt_icons/strategy_ico.png" loading="lazy" alt="Strategy Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--strategy">Strategy Machine</h3>	<p>Подробная информация.</p></div></div>
-		<div class="gpt-card-low-color gpt-card--trader"	data-tab="gpt10"><img src="assets/gpt_icons/traider_ico.png" loading="lazy" alt="Trader Machine" class="gpt-logo" /><div>			<h3 class="gpt-card--trader">Trader Machine</h3>	<p>Подробная информация.</p></div></div>
-	  </div>
+	<div class="gpt-grid">
+		<div class="gpt-card-low-color gpt-card--meta"		data-tab="gpt1"><img src="assets/gpt_icons/meta_ico.png" loading="lazy" alt="Meta Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--meta">Meta Machine</h3>		<p>Подробная информация.</p></div></div>
+		<div class="gpt-card gpt-card--research" 		data-tab="gpt8"><img src="assets/gpt_icons/research_ico.png" loading="lazy" alt="Research Machine" class="gpt-logo" /><div>	<h3 class="gpt-card--research">Research Machine</h3>	<p>Подробная информация.</p></div></div>
+		<div class="gpt-card gpt-card--sense" 			data-tab="gpt9"><img src="assets/gpt_icons/sense_ico.png" loading="lazy" alt="Sense Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--sense">Sense Machine</h3>		<p>Подробная информация.</p></div></div>
+		<div class="gpt-card gpt-card--creative" 		data-tab="gpt3"><img src="assets/gpt_icons/creative_ico.png" loading="lazy" alt="Creative Machine" class="gpt-logo" /><div>	<h3 class="gpt-card--creative">Creative Machine</h3>	<p>Подробная информация.</p></div></div>
+		<div class="gpt-card-low-color2 gpt-card--code"		data-tab="gpt7"><img src="assets/gpt_icons/code_ico.png" loading="lazy" alt="Code Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--code">Code Machine</h3>		<p>Подробная информация.</p></div></div>
+		<div class="gpt-card gpt-card--analyst" 		data-tab="gpt2"><img src="assets/gpt_icons/analyst_ico.png" loading="lazy" alt="Analyst Machine" class="gpt-logo" /><div>	<h3 class="gpt-card--analyst">Analyst Machine</h3>	<p>Подробная информация.</p></div></div>
+		<div class="gpt-card gpt-card--design" 			data-tab="gpt4"><img src="assets/gpt_icons/design_ico.png" loading="lazy" alt="Design Machine" class="gpt-logo" /><div>		<h3 class="gpt-card--design">Design Machine</h3>	<p>Подробная информация.</p></div></div>
+		<div class="gpt-card gpt-card--education"	 	data-tab="gpt5"><img src="assets/gpt_icons/education_ico.png" loading="lazy" alt="Education Machine" class="gpt-logo" /><div>	<h3 class="gpt-card--education">Education Machine</h3>	<p>Подробная информация.</p></div></div>
+		<div class="gpt-card gpt-card--strategy" 		data-tab="gpt6"><img src="assets/gpt_icons/strategy_ico.png" loading="lazy" alt="Strategy Machine" class="gpt-logo" /><div>	<h3 class="gpt-card--strategy">Strategy Machine</h3>	<p>Подробная информация.</p></div></div>
+		<div class="gpt-card-low-color gpt-card--trader"	data-tab="gpt10"><img src="assets/gpt_icons/traider_ico.png" loading="lazy" alt="Trader Machine" class="gpt-logo" /><div>	<h3 class="gpt-card--trader">Trader Machine</h3>	<p>Подробная информация.</p></div></div>
 	</div>
+</div>
 <!-- ########################################################################## -->
+
+
+<!-- ############################## АРХИТЕКТУРА ############################## -->
+<div id="architecture" class="section">
+	<h2>Инструкции</h2>
+	<p>Здесь вы сможете найти системную архитектуру и подробное описание.</p>
+	    
+	<!-- Обычная превью-картинка -->
+	<div class="architecture-img">
+		<img  class="architecture-img" src="assets/architecture.png" loading="lazy" alt="System architecture" onclick="openDialog()" />
+	</div>
+
+	<!-- Диалоговое окно с увеличенным изображением -->
+	<dialog id="archDialog" class="img-dialog" onclick="this.close()">
+		<img  class="architecture-img" src="assets/architecture.png" loading="lazy" alt="Full architecture" />
+	</dialog>
+</div>
+  <!-- ########################################################################## -->
+	  
 
 
 
 <!-- ################################## GITHUB ################################ -->
-    <div id="github" class="section">
-      <h2>GitHub</h2>
-      <div class="glow-box">
-        <h3>Исходный код</h3>
-        <p><a href="https://github.com/Vkuvalin/Analyst-Machine" target="_blank" style="color: var(--neon-blue); text-decoration: underline;">Перейти в репозиторий</a></p>
-      </div>
-    </div>
+<div id="github" class="section">
+	<h2>GitHub</h2>
+	<div class="glow-box">
+		<h3>Исходный код</h3>
+		<p><a href="https://github.com/Vkuvalin/Analyst-Machine" target="_blank" style="color: var(--neon-blue); text-decoration: underline;">Перейти в репозиторий</a></p>
+	</div>
+</div>
 <!-- ########################################################################## -->
 
 
 
 <!-- ########################### ЛИЧНЫЕ СТРАНИЦЫ ########################## -->
-    <!-- Заглушки для GPT-секций -->
-    <div id="gpt1" class="section"><h2>GPT 1</h2><p>Описание GPT 1...</p></div>
-    <div id="gpt2" class="section"><h2>GPT 2</h2><p>Описание GPT 2...</p></div>
-    <div id="gpt3" class="section"><h2>GPT 3</h2><p>Описание GPT 3...</p></div>
-    <div id="gpt4" class="section"><h2>GPT 4</h2><p>Описание GPT 4...</p></div>
-    <div id="gpt5" class="section"><h2>GPT 5</h2><p>Описание GPT 5...</p></div>
-    <div id="gpt6" class="section"><h2>GPT 6</h2><p>Описание GPT 6...</p></div>
-    <div id="gpt7" class="section"><h2>GPT 7</h2><p>Описание GPT 7...</p></div>
-    <div id="gpt8" class="section"><h2>GPT 8</h2><p>Описание GPT 8...</p></div>
-    <div id="gpt9" class="section"><h2>GPT 9</h2><p>Описание GPT 9...</p></div>
-    <div id="gpt10" class="section"><h2>GPT 9</h2><p>Описание GPT 10...</p></div>	
-  </div>
+<!-- Заглушки для GPT-секций -->
+<div id="gpt1" 	class="section"><h2>GPT 1</h2><p>Описание GPT 1...</p></div>
+<div id="gpt2" 	class="section"><h2>GPT 2</h2><p>Описание GPT 2...</p></div>
+<div id="gpt3" 	class="section"><h2>GPT 3</h2><p>Описание GPT 3...</p></div>
+<div id="gpt4" 	class="section"><h2>GPT 4</h2><p>Описание GPT 4...</p></div>
+<div id="gpt5" 	class="section"><h2>GPT 5</h2><p>Описание GPT 5...</p></div>
+<div id="gpt6" 	class="section"><h2>GPT 6</h2><p>Описание GPT 6...</p></div>
+<div id="gpt7" 	class="section"><h2>GPT 7</h2><p>Описание GPT 7...</p></div>
+<div id="gpt8" 	class="section"><h2>GPT 8</h2><p>Описание GPT 8...</p></div>
+<div id="gpt9" 	class="section"><h2>GPT 9</h2><p>Описание GPT 9...</p></div>
+<div id="gpt10"	class="section"><h2>GPT 9</h2><p>Описание GPT 10...</p></div>
 <!-- ########################################################################## -->
-
-
-
-
-
-
 <!-- ########################################################################################################################################################################################################################################################## -->
 
 
 <!-- ############################### JAVASCRIPT ############################### -->
 <script src="./app.js" defer></script>
-
-<script>
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const hasContent = document.body.innerText.trim().length > 0;
-      const hasVisibleElements = document.querySelectorAll('h1, h2, p, .card, .main-section').length > 0;
-      const bodyStyle = getComputedStyle(document.body);
-      const isBlackScreen = bodyStyle.backgroundColor === 'rgb(0, 0, 0)' || bodyStyle.backgroundColor === 'rgb(17, 17, 17)';
-
-      if ((!hasContent || !hasVisibleElements) && isBlackScreen) {
-        window.location.href = 'https://meta-machine.vercel.app/';
-      }
-    }, 1800); // ждём 1.8 секунды — достаточно, чтобы всё загрузилось
-  });
-</script>
+<!-- ########################################################################## -->
 
 </body>
 </html>
