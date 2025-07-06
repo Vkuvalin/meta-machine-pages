@@ -18,6 +18,7 @@
       --color-trader: #b96bff; 		/* Стратегия (Trader Machine)7e6dc9 	*/
     }
 
+/* ╔══════════════════════════════════ БАЗОВЫЕ */
     html, body {
       overflow-x: hidden;
       overflow-y: auto;
@@ -36,8 +37,48 @@
       overflow-wrap: break-word;  	/* Перенос по словам */
       word-break: break-word;     	/* Дополнительная подстраховка */
       }
+/* ╚══════════════════════════════════ */
 
-	
+
+
+/* ╔══════════════════════════════════ БАЗОВЫЕ */
+.article-text {
+  p {
+    line-height: 1.5;
+    text-indent: 2em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 1.2em;
+
+    li {
+      position: relative;
+      padding-left: 1.2em;
+      line-height: 1.2;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #E63946;
+        font-size: 1em;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  strong {
+    color: var(--neon-yellow); 
+  }
+}
+
+
+/* ╚══════════════════════════════════ */
+
+
+
+
 
     .topbar {
       display: flex;
