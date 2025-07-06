@@ -41,24 +41,23 @@
 
 
 
-/* ╔══════════════════════════════════ БАЗОВЫЕ */
+/* ╔══════════════════════════════════ Оформление документации */
 .article-text p {
   line-height: 1.5;
   text-indent: 2em;
+  color: #E63946;
 }
 
 .article-text ul {
   list-style: none;
   padding-left: 1.2em;
+  position: relative; /* ← обязательно! для работы ::before */
 }
 
 .article-text ul li {
   position: relative;
   padding-left: 1.2em;
   line-height: 1.2;
-}
-
-.article-text li {
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -67,6 +66,7 @@
   content: "•";
   position: absolute;
   left: 0;
+  top: 0.2em; /* можно подогнать визуально */
   color: #E63946;
   font-size: 1em;
   line-height: 1.2;
@@ -76,6 +76,7 @@
   color: var(--neon-yellow); 
 }
 /* ╚══════════════════════════════════ */
+
 
 
 
