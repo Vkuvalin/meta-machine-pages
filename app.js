@@ -6,6 +6,21 @@
     document.body.scrollTop = 0;
   });
 
+  
+  document.querySelectorAll('.article-collapsible').forEach(h2 => {
+    h2.addEventListener('click', () => {
+      h2.classList.toggle('active');
+      const content = h2.nextElementSibling;
+      if (!content) return;
+      // плавное раскрытие (если нужно)
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+
 // ############################################################################################# ТОП БАР
 // ############################### ТОП БАР И СКРОЛЛ
 window.addEventListener('load', () => {

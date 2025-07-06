@@ -42,9 +42,11 @@
 
 
 /* ╔══════════════════════════════════ Оформление документации */
+
+/* ---------- Общее ----------*/
 .article-text p {
   line-height: 1.4;
-  text-indent: 2em;
+  text-indent: 1em;
 }
 
 .article-text ul {
@@ -80,8 +82,48 @@
 .article-text strong {
   color: var(--neon-yellow); 
 }
+/* -------------------------------------*/
 
 
+
+
+/* ---------- Сокрытие h2 в документации ----------*/
+.article-collapsible {
+  color: var(--neon-yellow);
+  border-left: 4px solid var(--neon-yellow);
+  padding-left: 12px;
+  text-shadow: 0 0 2px var(--neon-yellow);
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  cursor: pointer;          /* чтобы было понятно, что можно кликать */
+  user-select: none;
+  transition: background 0.2s;
+}
+.article-collapsible:hover {
+  text-shadow: -5px 5px 5px rgba(255, 230, 0, 0.2),
+               -5px -5px 5px rgba(255, 230, 0, 0.2),
+               5px -5px 10px rgba(255, 230, 0, 0.4),
+               5px 5px 10px rgba(255, 230, 0, 0.4);
+}
+
+/* Контент под заголовком — изначально скрыт */
+.article-content {
+  display: none;
+  padding: 0 18px 20px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Когда .article-collapsible получает класс .active — показываем соседний .content */
+.article-collapsible.active + .article-content {
+  display: block;
+}
+
+/* ------------------------------------------------*/
+
+
+/* ---------- Анимация точек у списка ----------*/
 /* 💻 Только для десктопов (больше 768px): */
 @media (min-width: 769px) {
   @keyframes articlePulseAnimation {
@@ -111,14 +153,104 @@
     }
   }
 }
+/* -------------------------------------*/
+
+
+/* ---------- Таблица ----------*/
+/* Обёртка таблицы */
+.container {
+  display: flex;
+  text-align: start;
+  width: 100%;
+  overflow: hidden;
+}
+
+.table-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Сама таблица */
+.table-wrapper table {
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  padding: 15px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.table-wrapper th {
+  text-align: left;
+  color: var(--neon-yellow);
+}
+
+/* Спаны-линии вокруг таблицы */
+.table-wrapper span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.table-wrapper span:nth-of-type(1) {
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-yellow));
+  animation: animate1 4s linear infinite;
+  animation-delay: .25s;
+}
+@keyframes animate1 {
+  0%   { left: -100%; }
+  50%,100% { left: 100%; }
+}
+
+.table-wrapper span:nth-of-type(2) {
+  top: -100%; right: 0;
+  width: 2px; height: 100%;
+  background: linear-gradient(180deg, transparent, var(--neon-yellow));
+  animation: animate2 4s linear infinite;
+  animation-delay: .25s;
+}
+@keyframes animate2 {
+  0%   { top: -100%; }
+  50%,100% { top: 100%; }
+}
+
+.table-wrapper span:nth-of-type(3) {
+  bottom: 0; right: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(270deg, transparent, var(--neon-yellow));
+  animation: animate3 4s linear infinite;
+  animation-delay: .5s;
+}
+@keyframes animate3 {
+  0%   { right: -100%; }
+  50%,100% { right: 100%; }
+}
+
+.table-wrapper span:nth-of-type(4) {
+  bottom: -100%; left: 0;
+  width: 2px; height: 100%;
+  background: linear-gradient(360deg, transparent, var(--neon-yellow));
+  animation: animate4 4s linear infinite;
+  animation-delay: .25s;
+}
+@keyframes animate4 {
+  0%   { bottom: -100%; }
+  50%,100% { bottom: 100%; }
+}
+/* -------------------------------------*/
 
 /* ╚══════════════════════════════════ */
 
 
-
-
-
-
+/* ╔══════════════════════════════════ Топ Бар */
     .topbar {
       display: flex;
       justify-content: space-between;
@@ -176,7 +308,9 @@
       background: var(--neon-yellow);
       box-shadow: 0 0 6px var(--neon-yellow);
     }
+/* ╚══════════════════════════════════ */
 
+/* ╔══════════════════════════════════ ОСНОВНОЙ КОНТЕНТ (потом поправить)*/
     .content {
       padding: 2rem;
       max-width: 1040px;
@@ -219,12 +353,13 @@
     }
 
     .container-inline { 
-	display: flex; 
-	flex-direction: row; 
-	flex-wrap: wrap; 
-	justify-content: center;
+    display: flex; 
+	  flex-direction: row; 
+	  flex-wrap: wrap; 
+	  justify-content: center;
   	align-items: center;
     }  
+/* ╚══════════════════════════════════ */
 
 /* ╔══════════════════════════════════ rotating-description */
 	  
@@ -369,7 +504,6 @@
 
 	
 /* ╔═════════════════════════════════ CARDS COLORS ════════════════════════════════╗ */
-
 .architecture-img {
   cursor: zoom-in;
   max-width: 100%;
@@ -394,14 +528,11 @@
 .img-dialog::backdrop {
   background: rgba(0, 0, 0, 0.8);
 }
-
-
-
-
 /* ╚═════════════════════════════════════════════════════════════════════════════╝ */	
-	
-/* ╔═════════════════════════════════ CARDS COLORS ════════════════════════════════╗ */
 
+
+
+/* ╔═════════════════════════════════ CARDS COLORS ════════════════════════════════╗ */
 	.gpt-card--analyst    { color: var(--color-analyst) !important; }
 	.gpt-card--code       { color: var(--color-code) !important; }
 	.gpt-card--creative   { color: var(--color-creative) !important; }
@@ -412,9 +543,10 @@
 	.gpt-card--sense      { color: var(--color-sense) !important; }
 	.gpt-card--strategy   { color: var(--color-strategy) !important; }
 	.gpt-card--trader     { color: var(--color-trader) !important; }
-
 /* ╚═════════════════════════════════════════════════════════════════════════════╝ */
-	
+
+
+
 /* ╔══════════════════════════════════ KEY FRAMES ═════════════════════════════════╗ */
 
 /* ╔══════════════════════════════════ Анимация кружков */	  
