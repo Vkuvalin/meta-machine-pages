@@ -420,6 +420,7 @@
   align-items: center;
   cursor: pointer;
   color: currentColor;
+  -webkit-tap-highlight-color: transparent; /* убираем синий флэш */
 
   /* анимация входа и пульса */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -759,7 +760,7 @@
 }
 
 #rotating-description {
-  min-height: 146px;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -800,7 +801,7 @@
     display: none;
   }
    #rotating-description {
-    min-height: 18em;
+    min-height: 20em;
   }
 }
 
