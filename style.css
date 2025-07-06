@@ -58,6 +58,11 @@
   line-height: 1.2;
 }
 
+.article-text li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .article-text ul li::before {
   content: "•";
   position: absolute;
