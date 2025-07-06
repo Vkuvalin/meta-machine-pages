@@ -43,9 +43,8 @@
 
 /* ╔══════════════════════════════════ Оформление документации */
 .article-text p {
-  line-height: 1.5;
+  line-height: 1.4;
   text-indent: 2em;
-  color: #E63946;
 }
 
 .article-text ul {
@@ -57,24 +56,43 @@
 .article-text ul li {
   position: relative;
   padding-left: 1.2em;
-  line-height: 1.2;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  line-height: 1.4;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .article-text ul li::before {
-  content: "•";
+  content: "◉";
   position: absolute;
   left: 0;
-  top: 0.2em; /* можно подогнать визуально */
-  color: #E63946;
+  top: 0.1em; /* можно подогнать визуально */
+  color: #ffee00;
   font-size: 1em;
   line-height: 1.2;
+  animation-name: fadeUp, articlePulseAnimation;
+  animation-duration: 1.3s, 1.8s;
+  animation-delay: 0s, 0s;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards, none;
+  animation-timing-function: ease, ease-in-out;
 }
 
 .article-text strong {
   color: var(--neon-yellow); 
 }
+
+  @keyframes articlePulseAnimation {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(0.8);
+    }
+  }
+
 /* ╚══════════════════════════════════ */
 
 
@@ -374,7 +392,7 @@
 	.gpt-card--research   { color: var(--color-research) !important; }
 	.gpt-card--sense      { color: var(--color-sense) !important; }
 	.gpt-card--strategy   { color: var(--color-strategy) !important; }
-	.gpt-card--trader   { color: var(--color-trader) !important; }
+	.gpt-card--trader     { color: var(--color-trader) !important; }
 
 /* ╚═════════════════════════════════════════════════════════════════════════════╝ */
 	
@@ -416,7 +434,7 @@
     70% {
       width: 40px;
       height: 40px;
-      opacity: 0.35;            /* <-- точка с запятой */
+      opacity: 0.35;
       box-shadow: 0 0 14px 20px currentColor;
       margin-left: -20px;
       margin-top: -20px;
@@ -448,7 +466,7 @@
     70% {
       width: 40px;
       height: 40px;
-      opacity: 0.45;            /* <-- и здесь точка с запятой */
+      opacity: 0.45;            
       box-shadow: 0 0 14px 20px currentColor;
       margin-left: -20px;
       margin-top: -20px;
