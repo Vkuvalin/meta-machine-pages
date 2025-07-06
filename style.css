@@ -98,6 +98,7 @@
   cursor: pointer;          /* чтобы было понятно, что можно кликать */
   user-select: none;
   transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent; /* убираем синий флэш */
 }
 .article-collapsible:hover {
   text-shadow: -5px 5px 5px rgba(255, 230, 0, 0.2),
