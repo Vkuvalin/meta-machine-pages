@@ -166,6 +166,7 @@
   display: flex;
   text-align: start;
   width: 100%;
+  overflow: hidden;
 }
 
 .table-wrapper {
@@ -253,6 +254,7 @@
 
 
 
+
 /* 📱 Только для мобильных устройств (до 768px): */
 @media (max-width: 768px) {
 /* Обёртка таблицы */
@@ -283,6 +285,11 @@
   padding: 15px;
   background-color: rgba(0,0,0,0.5);
   color: #fff;
+}
+
+.table-wrapper th {
+  text-align: left;
+  color: var(--neon-yellow);
 }
 
 .table-wrapper th:nth-child(1),
