@@ -188,55 +188,6 @@
   background-color: rgba(0,0,0,0.5);
   color: #fff;
 }
-}
-
-/* 📱 Только для мобильных устройств (до 768px): */
-@media (max-width: 768px) {
-/* Обёртка таблицы */
-.container {
-  display: flex;
-  text-align: start;
-  width: 100%;
-  overflow-x: auto;                   /* чтобы .table-wrapper не усаживался по контенту, а мог занимать всю ширину родителя и скроллиться */
-  -webkit-overflow-scrolling: touch;  /* плавный скролл на iOS */
-}
-
-/* Сам «скроллящийся» контейнер */
-.table-wrapper {
-  position: relative;
-  display: inline-block;  /* можно оставить */
-  overflow-x: auto;       /* даём возможность прокрутки по горизонтали */
-}
-
-/* Сама таблица */
-.table-wrapper table {
-  border-collapse: collapse;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  width: max-content; /* делаем таблицу «широкой по содержимому», чтобы она не ломалась и давала скролл */
-}
-
-.table-wrapper th,
-.table-wrapper td {
-  padding: 15px;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-}
-
-.table-wrapper th:nth-child(1),
-.table-wrapper td:nth-child(1) {
-  width: 50px;
-}
-
-.table-wrapper th:nth-child(2),
-.table-wrapper td:nth-child(2) {
-  width: 100px;
-}
-
-.table-wrapper th:nth-child(3),
-.table-wrapper td:nth-child(3) {
-  width: 50px;
-}
-}
 
 .table-wrapper th {
   text-align: left;
@@ -296,6 +247,58 @@
 @keyframes animate4 {
   0%   { bottom: -100%; }
   50%,100% { bottom: 100%; }
+}
+}
+
+
+
+
+/* 📱 Только для мобильных устройств (до 768px): */
+@media (max-width: 768px) {
+/* Обёртка таблицы */
+.container {
+  display: flex;
+  text-align: start;
+  width: 100%;
+  overflow-x: auto;                   /* чтобы .table-wrapper не усаживался по контенту, а мог занимать всю ширину родителя и скроллиться */
+  -webkit-overflow-scrolling: touch;  /* плавный скролл на iOS */
+}
+
+/* Сам «скроллящийся» контейнер */
+.table-wrapper {
+  position: relative;
+  display: inline-block;  /* можно оставить */
+  overflow-x: auto;       /* даём возможность прокрутки по горизонтали */
+}
+
+/* Сама таблица */
+.table-wrapper table {
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: max-content; /* делаем таблицу «широкой по содержимому», чтобы она не ломалась и давала скролл */
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  padding: 15px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.table-wrapper th:nth-child(1),
+.table-wrapper td:nth-child(1) {
+  width: 50px;
+}
+
+.table-wrapper th:nth-child(2),
+.table-wrapper td:nth-child(2) {
+  width: 100px;
+}
+
+.table-wrapper th:nth-child(3),
+.table-wrapper td:nth-child(3) {
+  width: 50px;
+}
 }
 /* -------------------------------------*/
 
