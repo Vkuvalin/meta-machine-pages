@@ -138,10 +138,20 @@ tabs.forEach(tab => {
 // ############################### HISTORY API
 // 🔹 Отображение секции
 function showSection(id) {
+  // 1. Снимаем активность
   document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
   document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
-  document.querySelector(`.tab[data-tab="${id}"]`)?.classList.add("active");
+
+  // 2. Устанавливаем активный таб и секцию
+  const isGPTSection = /^gpt\d+$/.test(id); // ← если это одна из gpt-секций
+
+  // Если это gpt1–gpt10, активируем tab "guide"
+  const activeTab = isGPTSection ? "guide" : id;
+
+  document.querySelector(`.tab[data-tab="${activeTab}"]`)?.classList.add("active");
   document.getElementById(id)?.classList.add("active");
+
+  // 3. Обновляем localStorage
   localStorage.setItem("activeTab", id);
 }
 
