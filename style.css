@@ -97,6 +97,7 @@
     color: rgba(255, 230, 0, 0.85);
     box-shadow: 0 0 1px #ffee00,
                 0 0 5px #ffee00;
+    -webkit-tap-highlight-color: transparent; /* убираем синий флэш */
   }
 
   .instruction span {
