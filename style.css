@@ -41,6 +41,18 @@
 
 
 
+
+/* ╔══════════════════════════════════ Оформление документации */
+  .spesial-strong {
+    color: var(--neon-yellow) !important;
+  }
+
+  .table-bottom-border-neon td {
+    border-bottom: 1px solid rgba(255, 230, 0, 0.15);
+  }
+/* ╚══════════════════════════════════ */
+
+
 /* ╔══════════════════════════════════ Оформление документации */
 
 /* ---------- Общее ----------*/
@@ -80,7 +92,7 @@
 }
 
 .article-text strong {
-  color: var(--neon-yellow); 
+  color: var(--neon-yellow);
 }
 /* -------------------------------------*/
 
@@ -168,6 +180,7 @@
     display: flex;
     text-align: start;
     width: 100%;
+    overflow: hidden;
   }
 
   .table-wrapper {
