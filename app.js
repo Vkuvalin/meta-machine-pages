@@ -21,6 +21,14 @@
     });
   });
 
+  const buttons = document.querySelectorAll('.instruction');
+  buttons.forEach( button => {
+    button.addEventListener("click", () => {
+      const target = button.getAttribute("data-tab");
+      showSection(target);
+    });
+  });
+
 // ############################################################################################# ТОП БАР
 // ############################### ТОП БАР И СКРОЛЛ
 window.addEventListener('load', () => {

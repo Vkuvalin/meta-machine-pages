@@ -6,16 +6,16 @@
       --text-light: #e6e6e6;
       --text-mid: #aaa;
 	  
-      --color-analyst: #00fbfa;		/* Аналитика (Analyst Machine)		*/
-      --color-code: #3ca0ff;		/* Код (Code Machine) 			*/
-      --color-creative: #fc3fe6;	/* Креатив (Creative Machine) 		*/
-      --color-design: #2ff7bb;		/* Дизайн (Design Machine) 		*/
-      --color-education: #fcfc32;	/* Образование (Education Machine) 	*/
-      --color-meta: #2bd0f7;		/* Метамашина (Meta Machine) 		*/
-      --color-research: #4dfc95;	/* Исследование (Research Machine) 	*/
-      --color-sense: #fc2f3c; 		/* Смысл (Sense Machine) 		*/
-      --color-strategy: #fb9209; 	/* Стратегия (Strategy Machine) 	*/
-      --color-trader: #b96bff; 		/* Стратегия (Trader Machine)7e6dc9 	*/
+      --color-analyst: #00fbfa;		  /* Аналитика (Analyst Machine)		  */
+      --color-code: #3ca0ff;		      /* Код (Code Machine) 			        */
+      --color-creative: #fc3fe6;	    /* Креатив (Creative Machine) 		  */
+      --color-design: #2ff7bb;		    /* Дизайн (Design Machine) 		      */
+      --color-education: #fcfc32;	  /* Образование (Education Machine) 	*/
+      --color-meta: #2bd0f7;		      /* Метамашина (Meta Machine) 		    */
+      --color-research: #4dfc95;	    /* Исследование (Research Machine) 	*/
+      --color-sense: #fc2f3c; 		    /* Смысл (Sense Machine) 		        */
+      --color-strategy: #fb9209; 	  /* Стратегия (Strategy Machine) 	  */
+      --color-trader: #b96bff; 		  /* Стратегия (Trader Machine) 	    */
     }
 
 /* ╔══════════════════════════════════ БАЗОВЫЕ */
@@ -31,12 +31,22 @@
       background-color: var(--bg-dark);
       color: var(--text-light);
     }
+    
+  body {
+    overflow-y: scroll; /* ← скролл остаётся */
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE/Edge */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari */
+  }
 	
-     p {
+    p {
       hyphens: auto;              	/* Перенос по слогам */
       overflow-wrap: break-word;  	/* Перенос по словам */
       word-break: break-word;     	/* Дополнительная подстраховка */
-      }
+    }
 /* ╚══════════════════════════════════ */
 
 
@@ -50,7 +60,72 @@
   .table-bottom-border-neon td {
     border-bottom: 1px solid rgba(255, 230, 0, 0.15);
   }
+
+
+  /* ---------- BUTTON ----------*/
+  .instruction {
+    position: fixed;
+    left: 0;
+    top: 5%;
+    left: 2%;
+    z-index: 9999;
+  }
+
+  .instruction button {
+    background: #000000;
+    position: absolute;
+    border: none;
+    padding: 5px 10px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    width: 120px;
+    cursor: pointer;
+    transform: skew(-21deg);
+    border: 1px solid #ffee00;
+    color: rgba(255, 230, 0, 0.85);
+    box-shadow: 0 0 1px #ffee00,
+                0 0 5px #ffee00;
+  }
+
+  .instruction span {
+    display: inline-block;
+    transform: skew(21deg);
+    width: 100%;
+    height: 100%;
+  }
+
+  .instruction button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgba(255, 230, 0, 0.85);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+    transform: scale(0.97, 0.9);
+    box-shadow: 0 0 30px #ffee00;
+  }
+
+  .instruction span:hover {
+    transform: skew(5deg);
+  }
+
+  .instruction button:hover {
+    color: #000000;
+  }
+
+  .instruction button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
 /* ╚══════════════════════════════════ */
+
+
 
 
 /* ╔══════════════════════════════════ Оформление документации */
