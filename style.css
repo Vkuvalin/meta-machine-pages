@@ -63,13 +63,28 @@
 
 
   /* ---------- BUTTON ----------*/
+  /* 💻 Только для десктопов (больше 768px): */
+  @media (min-width: 769px) {
   .instruction {
     position: fixed;
     left: 0;
     top: 5%;
     left: 2%;
-    z-index: 9999;
+    z-index: -1;
   }
+  }
+
+  /* 📱 Только для мобильных устройств (до 768px): */
+  @media (max-width: 768px) {
+  .instruction {
+    position: fixed;
+    left: 0;
+    top: 10%;
+    left: 2%;
+    z-index: -1;
+  }
+  }
+/* -------------------------------------*/
 
   .instruction button {
     background: #000000;
