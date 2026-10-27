@@ -25,6 +25,7 @@
   buttons.forEach( button => {
     button.addEventListener("click", () => {
       const target = button.getAttribute("data-tab");
+      history.pushState({ tab: target }, "", `#${target}`);
       showSection(target);
     });
   });
@@ -61,26 +62,6 @@ window.addEventListener('load', () => {
 // ############################### Обработчик навигации (tabs)
 // 1) Получаем все табы и контент-секции
 const tabs = document.querySelectorAll('.tab');
-const tabContents = document.querySelectorAll('.tab-content');
-
-// 2) Общий обработчик клика
-function onTabClick(event) {
-  const targetTab = event.currentTarget;
-  const targetId  = targetTab.dataset.target;  // например data-target="guide"
-
-  // 2.1) Деактивируем все табы и контенты
-  tabs.forEach(tab => tab.classList.remove('active'));
-  tabContents.forEach(content => content.classList.remove('active'));
-
-  // 2.2) Активируем кликнутый таб и соответствующий контент
-  targetTab.classList.add('active');
-  document.getElementById(targetId).classList.add('active');
-}
-
-// 3) Навешиваем один раз
-tabs.forEach(tab => {
-  tab.addEventListener('click', onTabClick);
-});
 // ###############################
 
 
@@ -146,6 +127,11 @@ tabs.forEach(tab => {
 // ############################### HISTORY API
 // 🔹 Отображение секции
 function showSection(id) {
+  if (!document.getElementById(id)?.classList.contains("section")) {
+    id = "home";
+    history.replaceState({ tab: id }, "", "#home");
+  }
+
   // 1. Снимаем активность
   document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
   document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
